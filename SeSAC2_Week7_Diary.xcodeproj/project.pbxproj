@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3E1E1428AF127500E9530A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E1E1328AF127500E9530A /* BaseViewController.swift */; };
+		AE3E1E1728AF144500E9530A /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E1E1628AF144500E9530A /* WriteViewController.swift */; };
+		AE3E1E1928AF16A100E9530A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E1E1828AF16A100E9530A /* BaseView.swift */; };
+		AE3E1E1B28AF179700E9530A /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E1E1A28AF179700E9530A /* WriteView.swift */; };
+		AE3E1E1E28AF2CFE00E9530A /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E1E1D28AF2CFE00E9530A /* BlackRadiusTextField.swift */; };
 		AEC05C0E28AB1FDD00F36181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC05C0D28AB1FDD00F36181 /* AppDelegate.swift */; };
 		AEC05C1028AB1FDD00F36181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC05C0F28AB1FDD00F36181 /* SceneDelegate.swift */; };
 		AEC05C1228AB1FDD00F36181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC05C1128AB1FDD00F36181 /* ViewController.swift */; };
@@ -60,6 +65,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE3E1E1328AF127500E9530A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AE3E1E1628AF144500E9530A /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		AE3E1E1828AF16A100E9530A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		AE3E1E1A28AF179700E9530A /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		AE3E1E1D28AF2CFE00E9530A /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
 		AEC05C0A28AB1FDD00F36181 /* SeSAC2_Week7_Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC2_Week7_Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC05C0D28AB1FDD00F36181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEC05C0F28AB1FDD00F36181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +104,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE3E1E1028AF125500E9530A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E1E1C28AF2CD600E9530A /* CustomView */,
+				AE3E1E1328AF127500E9530A /* BaseViewController.swift */,
+				AE3E1E1828AF16A100E9530A /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		AE3E1E1528AF141A00E9530A /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E1E1628AF144500E9530A /* WriteViewController.swift */,
+				AE3E1E1A28AF179700E9530A /* WriteView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		AE3E1E1C28AF2CD600E9530A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E1E1D28AF2CFE00E9530A /* BlackRadiusTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		AEC05C0128AB1FDD00F36181 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +152,8 @@
 		AEC05C0C28AB1FDD00F36181 /* SeSAC2_Week7_Diary */ = {
 			isa = PBXGroup;
 			children = (
+				AE3E1E1528AF141A00E9530A /* Diary */,
+				AE3E1E1028AF125500E9530A /* Utility */,
 				AEC05C8728ADDEEB00F36181 /* Extension */,
 				AEC05C5128AC719A00F36181 /* CodeBase */,
 				AEC05C4128AB3A3B00F36181 /* WalkThrough */,
@@ -278,16 +317,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3E1E1B28AF179700E9530A /* WriteView.swift in Sources */,
+				AE3E1E1428AF127500E9530A /* BaseViewController.swift in Sources */,
+				AE3E1E1E28AF2CFE00E9530A /* BlackRadiusTextField.swift in Sources */,
 				AEC05C1228AB1FDD00F36181 /* ViewController.swift in Sources */,
 				AEC05C8B28ADDF0500F36181 /* UIViewController+Extension.swift in Sources */,
 				AEC05C0E28AB1FDD00F36181 /* AppDelegate.swift in Sources */,
 				AEC05C6128AC8C1400F36181 /* CodeSnap2ViewController.swift in Sources */,
 				AEC05C1028AB1FDD00F36181 /* SceneDelegate.swift in Sources */,
+				AE3E1E1728AF144500E9530A /* WriteViewController.swift in Sources */,
 				AEC05C5F28AC822D00F36181 /* CodeSnapKitViewController.swift in Sources */,
 				AEC05C8D28ADE65700F36181 /* ProfileViewController.swift in Sources */,
 				AEC05C4728AB40C000F36181 /* SecondViewController.swift in Sources */,
 				AEC05C4928AB40C700F36181 /* ThirdViewController.swift in Sources */,
 				AEC05C5528AC71B600F36181 /* CodeViewController.swift in Sources */,
+				AE3E1E1928AF16A100E9530A /* BaseView.swift in Sources */,
 				AEC05C4B28AB410800F36181 /* WalkThroughViewController.swift in Sources */,
 				AEC05C4528AB3A9F00F36181 /* FirstViewController.swift in Sources */,
 			);

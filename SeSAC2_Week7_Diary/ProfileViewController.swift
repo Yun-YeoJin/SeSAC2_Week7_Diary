@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+extension NSNotification.Name {
+    static let saveButton = NSNotification.Name("saveButtonNotification")
+}
+
 class ProfileViewController: UIViewController {
 
     let saveButton: UIButton = {
@@ -25,7 +29,7 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
-    var saveButtonActionHandler: (() -> ())?
+    var saveButtonActionHandler: ((String) -> ())?
     
     func configure() {
         [saveButton, nameTextField].forEach { view.addSubview($0) }
@@ -48,12 +52,27 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .yellow
         
         saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("TEST"), object: nil)
+    }
+    
+    @objc func saveButtonNotificationObserver(notification: NSNotification) {
+        
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameTextField.text = name
+        }
     }
     
     @objc func saveButtonClicked() {
         
+        
+        //MARK: 2. Notification 보내기
+        NotificationCenter.default.post(name: .saveButton, object: nil, userInfo: ["name": nameTextField.text!, "value": 123456])
+        
+        //1. 클로저 기능
         //값 전달기능 실행 => 클로저 구문 활용
-        saveButtonActionHandler?()
+        saveButtonActionHandler?(nameTextField.text!)
         
         //화면 dismiss
         dismiss(animated: true)
