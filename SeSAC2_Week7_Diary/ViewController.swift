@@ -6,14 +6,59 @@
 //
 
 import UIKit
+import SeSAC2_UIFramework
+import SnapKit
+
 
 class ViewController: UIViewController {
-
+    
+    var testArray: Array<Int> = [1,2,3,4]
+    var testdic: Dictionary<Int, String> = [:]
+    var testSet: Set = [2,3,4]
+    
+    let nameButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("닉네임", for: .normal)
+        view.backgroundColor = .black
+        view.tintColor = .black
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        configure()
+        
+        nameButton.addTarget(self, action: #selector(nameButtonClicked), for: .touchUpInside)
     }
-
-
+    @objc func nameButtonClicked() {
+        
+        let vc = ProfileViewController()
+        vc.saveButtonActionHandler = {
+            self.nameButton.setTitle(vc.nameTextField.text, for: .normal)
+        }
+        
+        present(vc, animated: true)
+    }
+    
+    func configure() {
+        
+        view.addSubview(nameButton)
+        
+        nameButton.snp.makeConstraints { make in
+            make.width.height.equalTo(200)
+            make.center.equalTo(view)
+        }
+    }
+    
+    
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        super.viewDidAppear(animated)
+    //
+    //        let vc = CodeSnap2ViewController()
+    //        vc.modalPresentationStyle = .fullScreen
+    //        present(vc, animated: true)
+    //
+    //    }
 }
 
